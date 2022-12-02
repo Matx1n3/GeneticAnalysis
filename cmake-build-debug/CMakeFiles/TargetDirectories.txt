@@ -1,0 +1,3 @@
+/home/matxin/WorkSpace/Uni/2ndo/1er cuatri/CA/GeneticAnalysis/cmake-build-debug/CMakeFiles/GeneticAnalysis.dir
+/home/matxin/WorkSpace/Uni/2ndo/1er cuatri/CA/GeneticAnalysis/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/matxin/WorkSpace/Uni/2ndo/1er cuatri/CA/GeneticAnalysis/cmake-build-debug/CMakeFiles/rebuild_cache.dir

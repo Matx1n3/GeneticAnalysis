@@ -21,9 +21,11 @@
 
 double geneticdistance (float *elem1, float *elem2)
 {
-
-   // TO DO
-   // calculate the distance between two elements (Euclidean)
+    double distance = 0.0;
+    for (int i = 0; i < 40; i++){
+        distance += pow(elem1[i] - elem2[i], 2);
+    }
+    return sqrt(distance);
 
 }
 
@@ -38,13 +40,24 @@ double geneticdistance (float *elem1, float *elem2)
 
 void closestgroup (int nelems, float elems[][NFEAT], float cent[][NFEAT], int *grind)
 {
-
    // TO DO
    // grind: closest group/centroid for each element
-
+   int minGroup;
+   double minDistance;
+   double actDistance;
+    for (int i = 0; i < nelems; i++){
+        minGroup = 0;
+        minDistance = geneticdistance(elems[i], cent[0]);
+        for (int j = 1; j < ngroups; j++){
+            actDistance = geneticdistance(elems[i], cent[j]);
+            if (actDistance < minDistance) {
+                minDistance = actDistance;
+                minGroup = j;
+            }
+        }
+        grind[i] = minGroup;
+    }
 }
-
-
 
 /* 3 - Function to validate the classification: group compactness and centroids compactness 
        Calculate the CVI index

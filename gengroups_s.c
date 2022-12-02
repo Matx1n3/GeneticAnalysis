@@ -101,7 +101,6 @@ void main (int argc, char *argv[])
   while ((ngroups < NGROUPSMAX) && (finish_classif == 0))
   {
     // select randomly the first centroids
-
     firstcentroids (cent);
 
 
@@ -112,8 +111,7 @@ void main (int argc, char *argv[])
     finish = 0;
     while ((finish == 0) && (niter < MAXIT))
     {
-      // Obtain the closest group or cluster for each element 
-
+      // Obtain the closest group or cluster for each element
       closestgroup (nelems, elems, cent, grind);
 
       // Calculate new centroids and decide to finish or not depending on DELTA
